@@ -20,6 +20,7 @@ const config: Config = {
 			labelAnotherColorForProduct:'#2EC1AC',
 			inspirationBackground:'#FCF8F3',
 			dotColor:"#D8D8D8",
+			shopSecondBackground:"#F9F1E7",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

@@ -1,5 +1,4 @@
-// Importing the Poppins font from Next.js' Google Font utility
-import { Poppins } from 'next/font/google';
+
 import ColorFulButton from './ColorFulButton';
 import Image from 'next/image';
 import {
@@ -10,16 +9,10 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 
-// Setting up the Poppins font with different font weights and subsets
-const poppins = Poppins({
-    subsets: ['latin'],
-    weight: ['100', '200', '300', '400', '500', '600', "700", '800', '900']
-});
-
 const Inspiration = () => {
     return (
         // Main container with background, padding, and responsive layout
-        <div className={`bg-inspirationBackground py-[40px] px-[10px] flex flex-col justify-center flex-wrap lg:flex-nowrap md:flex-row gap-7 ${poppins.className} `}>
+        <div className={`bg-inspirationBackground py-[40px] px-[10px] flex flex-col justify-center flex-wrap lg:flex-nowrap md:flex-row gap-7 `}>
 
             {/* Left Section: Text and Button */}
             <div className={`px-5 lg:pl-[50px] flex flex-col items-center justify-center w-full lg:w-1/3`}>

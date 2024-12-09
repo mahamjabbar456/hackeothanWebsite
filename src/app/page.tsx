@@ -12,7 +12,6 @@ export default function Home() {
       <Products />
       <Inspiration />
       <ShareSection />
-      <hr />
     </div>
   );
 }

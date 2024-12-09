@@ -1,13 +1,5 @@
 import Image from "next/image";
 // Importing the Poppins font from Next.js' Google Font utility
-import { Poppins } from 'next/font/google';
-
-// Setting up the Poppins font with different font weights and subsets
-// This allows the usage of various font weights like '100', '200', '300', etc. throughout the app.
-const poppins = Poppins({
-    subsets: ['latin'],  // Specifies that the Latin character subset should be included
-    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']  // The weights of the font that will be used
-});
 
 // ProductCard component definition with props for rendering product details
 const ProductCard = ({ 
@@ -28,7 +20,7 @@ const ProductCard = ({
     forceHover: boolean; 
 }) => {
     return (
-        <div className={`${poppins.className} w-[285px] h-[446px] bg-productBackground relative overflow-hidden group cursor-pointer ${forceHover ? 'hovered' : ''}`}>
+        <div className={` w-[285px] h-[446px] bg-productBackground relative overflow-hidden group cursor-pointer ${forceHover ? 'hovered' : ''}`}>
             {/* Product Image with hover effect */}
             <Image
                 src={url}

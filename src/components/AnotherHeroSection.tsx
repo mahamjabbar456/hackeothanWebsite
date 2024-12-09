@@ -1,27 +1,35 @@
-// Importing the Poppins font from Next.js' Google Font utility
-import { Poppins } from 'next/font/google';
 
 // Importing the Image component from Next.js for optimized image handling
 import Image from "next/image";
 
-// Setting up the Poppins font with different font weights and Latin subset
-const poppins = Poppins({
-    subsets: ['latin'],
-    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-});
-
-const AnotherHeroSection = () => {
+// AnotherHeroSection component, which accepts a `title` prop
+const AnotherHeroSection = ({ title ,image }: { title: string, image:string }) => {
   return (
-    <div className={`${poppins.className} w-full h-[316px] relative flex flex-col items-center justify-center`}>
+    // Main container with full width, fixed height, and centered content
+    <div className={`w-full h-[316px] relative flex flex-col items-center justify-center`}>
+
+      {/* Background image filling the entire container with an object-cover property */}
       <Image src={'/assets/backgroundimage1.png'} alt="backgroundimage" fill className="object-cover" />
-      <p className="text-[48px] font-medium text-black">Shop</p>
+
+      {image && (
+        <Image src={image} alt={title} width={60} height={60} className='mb-0' />
+      )}
+
+      {/* Title text displayed over the background image */}
+      <p className="text-[48px] font-medium text-black">{title}</p>
+
+      {/* Navigation breadcrumbs: "Home > title" */}
       <div className='flex gap-2'>
         <p className='font-medium text-[16px]'>Home</p>
+        
+        {/* Arrow icon separating "Home" and the current title */}
         <Image src={'/assets/greaterarrow.svg'} alt='left arrow' width={8} height={8} />
-        <p className='font-light text-[16px]'>Shop</p>
+        
+        {/* Displaying the current section title */}
+        <p className='font-light text-[16px]'>{title}</p>
       </div>
     </div>
   )
 }
 
-export default AnotherHeroSection
+export default AnotherHeroSection;

@@ -1,11 +1,3 @@
-// Importing the Poppins font from Next.js' Google Font utility
-import { Poppins } from 'next/font/google';
-
-// Setting up the Poppins font with different font weights and subsets
-const poppins = Poppins({
-    subsets: ['latin'],
-    weight: ['100', '200', '300', '400', '500', '600', "700", '800', '900']
-});
 
 // Footer component definition
 const Footer = () => {
@@ -16,7 +8,7 @@ const Footer = () => {
       <div className='h-[419px]'>
 
         {/* Top section: four-column layout with responsive spacing */}
-        <div className={`${poppins.className} flex flex-wrap justify-between gap-10 mb-[50px] lg:gap-0`}>
+        <div className={`flex flex-wrap justify-between gap-10 mb-[50px] lg:gap-0`}>
           
           {/* First column: Company information */}
           <div className='space-y-[50px] w-[285px]'>
@@ -60,7 +52,7 @@ const Footer = () => {
 
         {/* Bottom section: Footer border and copyright text */}
         <div className='border-t-[1px] border-footerTextColor'>
-          <p className={`${poppins.className} font-normal text-[16px] pt-[35px]`}>
+          <p className={`font-normal text-[16px] pt-[35px]`}>
             2023 furino. All rights reserved
           </p>
         </div>

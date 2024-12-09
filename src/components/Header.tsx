@@ -1,6 +1,3 @@
-// Importing the Poppins font from Next.js' Google Font utility
-import { Poppins } from 'next/font/google';
-
 // Importing necessary Next.js components for navigation and image rendering
 import Link from "next/link";
 import Image from "next/image";
@@ -11,12 +8,6 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 // Importing custom UI components from './ui/sheet' for handling the mobile navigation sheet
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet';
-
-// Setting up the Poppins font with different font weights and subsets
-const poppins = Poppins({
-    subsets: ['latin'],
-    weight: ['100', '200', '300', '400', '500', '600', "700", '800', '900']
-});
 
 // Defining the Header component
 const Header = () => {
@@ -39,7 +30,7 @@ const Header = () => {
 
                 {/* Middle Navigation Links (visible on large screens) */}
                 <div className="middlepart">
-                    <ul className={`${poppins.className} font-medium text-[16px] hidden lg:flex lg:gap-12 md:gap-5`}>
+                    <ul className={`font-medium text-[16px] hidden lg:flex lg:gap-12 md:gap-5`}>
                         {
                             navItems.map((item) => (
                                 // Navigation link items
@@ -63,7 +54,7 @@ const Header = () => {
                                 </SheetTitle>
                                 <SheetDescription>
                                     {/* Mobile Navigation Links */}
-                                    <ul className={`${poppins.className} font-medium text-[16px] flex flex-col items-start gap-5 py-5`}>
+                                    <ul className={`font-medium text-[16px] flex flex-col items-start gap-5 py-5`}>
                                         {
                                             navItems.map((item) => (
                                                 <li key={item.name}><Link href={item.link}>{item.name}</Link></li>
